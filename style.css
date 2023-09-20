@@ -1,8 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 body {
   height: 100vh;
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+}
+
+ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+ul div {
+  display: flex;
+  gap: 10px;
+}
+
+.section_minigame {
+  height: 90vh;
   background: url(img/bg.svg) no-repeat;
-  object-fit: cover;
-  object-position: 50% 100%;
+  background-size: cover;
+  overflow: hidden;
 }
 
 svg,
@@ -26,8 +55,82 @@ g {
   width: 50%;
 
   position: absolute;
-  top: 20%;
+  top: 35%;
   left: -100%;
+}
+
+.hand {
+  width: 20%;
+
+  position: absolute;
+  left: 40%;
+  top: 45%;
+}
+
+.hand #tel-contact {
+  display: none;
+}
+
+.hand #tel-accueil #contact:hover rect {
+  transition: all 0.2s;
+  fill: #afc64f;
+}
+
+.hand #tel-accueil #appli:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-2:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-3:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-4:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-5:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-6:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #mail:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-contact #cuisto .cls-6 {
+  fill: white;
+}
+
+.hand #tel-contact #cuisto .bg_contact_active,
+.hand #tel-contact #bryan .bg_contact_active,
+.hand #tel-contact #maxime .bg_contact_active {
+  fill: #455a64;
+}
+
+.hand #tel-contact #cuisto .text_contact_active,
+.hand #tel-contact #bryan .text_contact_active,
+.hand #tel-contact #maxime .text_contact_active {
+  fill: white;
+}
+
+.hand #tel-contact #cuisto:hover .bg_contact,
+.hand #tel-contact #bryan:hover .bg_contact,
+.hand #tel-contact #maxime:hover .bg_contact {
+  fill: gainsboro;
 }
 
 .food_truck::before {
