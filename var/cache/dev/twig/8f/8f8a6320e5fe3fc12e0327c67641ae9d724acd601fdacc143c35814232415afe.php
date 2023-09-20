@@ -28,6 +28,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
             'title' => [$this, 'block_title'],
             'css' => [$this, 'block_css'],
             'body' => [$this, 'block_body'],
+            'js' => [$this, 'block_js'],
         ];
     }
 
@@ -66,7 +67,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello HomeController!";
+        echo "- Home";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,7 +86,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
 
-        echo "<style src=\"";
+        echo "<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/style.css"), "html", null, true);
         echo "\">";
         
@@ -107,9 +108,91 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "    <a href=\"";
+        echo "
+    <script>
+        const menu = {
+            \"pain\": [\"burger\", \"baguette\", \"pas de pain\"],
+            \"viande\": [\"merguez\", \"fricandelle\", \"steak\", \"poulet\"],
+            \"sauce\": [\"ketchup\", \"mayo\", \"moutarde\"],
+            \"frites\": [\"petite\", \"moyenne\", \"grande\", \"aucune\"],
+            \"boisson\": [\"coca\", \"orangina\", \"vittel\", \"aucune\"]
+        };
+
+        var choice = {
+            \"pain\": menu.pain[0],      
+            \"viande\": menu.viande[0],  
+            \"sauce\": menu.sauce[0],    
+            \"frites\": menu.frites[1],  
+            \"boisson\": menu.boisson[1]
+        };
+    </script>
+
+    <a class=\"hidden\" href=\"";
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">disconnect</a>
+
+    <div id=\"div-planche\">
+        ";
+        // line 29
+        echo twig_source($this->env, "svg/planche.svg");
+        echo "
+    </div>
+
+    <section id=\"menu-svg\">
+        <div id=\"pain\">
+            ";
+        // line 34
+        echo twig_source($this->env, "svg/baguette.svg");
+        echo "
+            ";
+        // line 35
+        echo twig_source($this->env, "svg/burger.svg");
+        echo "
+        </div>
+        <div id=\"viande\">
+            ";
+        // line 38
+        echo twig_source($this->env, "svg/merguez.svg");
+        echo "
+        </div>
+        <div id=\"sauce\">
+            ";
+        // line 41
+        echo twig_source($this->env, "svg/ketchup.svg");
+        echo "
+        </div>
+        <div id=\"frites\">
+        
+        </div>
+        <div id=\"boisson\">
+        
+        </div>
+    </section>
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 53
+    public function block_js($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
+
+        // line 54
+        echo "    <script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/drag&drop.js"), "html", null, true);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -131,18 +214,65 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
 
     public function getDebugInfo()
     {
-        return array (  110 => 7,  100 => 6,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  193 => 54,  183 => 53,  162 => 41,  156 => 38,  150 => 35,  146 => 34,  138 => 29,  132 => 26,  111 => 7,  101 => 6,  80 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-{% block css %}<style src=\"{{asset('assets/css/style.css')}}\">{% endblock %}
+{% block title %}- Home{% endblock %}
+{% block css %}<link rel=\"stylesheet\" href=\"{{asset(\"assets/css/style.css\")}}\">{% endblock %}
 
 {% block body %}
-    <a href=\"{{path(\"app_logout\")}}\">disconnect</a>
+
+    <script>
+        const menu = {
+            \"pain\": [\"burger\", \"baguette\", \"pas de pain\"],
+            \"viande\": [\"merguez\", \"fricandelle\", \"steak\", \"poulet\"],
+            \"sauce\": [\"ketchup\", \"mayo\", \"moutarde\"],
+            \"frites\": [\"petite\", \"moyenne\", \"grande\", \"aucune\"],
+            \"boisson\": [\"coca\", \"orangina\", \"vittel\", \"aucune\"]
+        };
+
+        var choice = {
+            \"pain\": menu.pain[0],      
+            \"viande\": menu.viande[0],  
+            \"sauce\": menu.sauce[0],    
+            \"frites\": menu.frites[1],  
+            \"boisson\": menu.boisson[1]
+        };
+    </script>
+
+    <a class=\"hidden\" href=\"{{path(\"app_logout\")}}\">disconnect</a>
+
+    <div id=\"div-planche\">
+        {{ source('svg/planche.svg') }}
+    </div>
+
+    <section id=\"menu-svg\">
+        <div id=\"pain\">
+            {{ source('svg/baguette.svg') }}
+            {{ source('svg/burger.svg') }}
+        </div>
+        <div id=\"viande\">
+            {{ source('svg/merguez.svg') }}
+        </div>
+        <div id=\"sauce\">
+            {{ source('svg/ketchup.svg') }}
+        </div>
+        <div id=\"frites\">
+        
+        </div>
+        <div id=\"boisson\">
+        
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block js %}
+    <script src=\"{{asset(\"assets/js/drag&drop.js\")}}\"></script>
 {% endblock %}
 ", "home/index.html.twig", "C:\\MAMP\\htdocs\\CrazyFries\\templates\\home\\index.html.twig");
     }

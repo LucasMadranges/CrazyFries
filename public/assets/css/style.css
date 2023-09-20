@@ -1,0 +1,7 @@
+#planche{
+    width: 30rem;
+}
+#baguette, #merguez, #ketchup, #burger{
+    width: 15rem;
+    cursor:grab;
+}

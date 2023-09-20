@@ -1,8 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
-{% block css %}<style src="{{asset('assets/css/style.css')}}">{% endblock %}
+{% block title %}- Home{% endblock %}
+{% block css %}<link rel="stylesheet" href="{{asset("assets/css/style.css")}}">{% endblock %}
 
 {% block body %}
-    <a href="{{path("app_logout")}}">disconnect</a>
+
+    <script>
+        const menu = {
+            "pain": ["burger", "baguette", "pas de pain"],
+            "viande": ["merguez", "fricandelle", "steak", "poulet"],
+            "sauce": ["ketchup", "mayo", "moutarde"],
+            "frites": ["petite", "moyenne", "grande", "aucune"],
+            "boisson": ["coca", "orangina", "vittel", "aucune"]
+        };
+
+        var choice = {
+            "pain": menu.pain[0],      
+            "viande": menu.viande[0],  
+            "sauce": menu.sauce[0],    
+            "frites": menu.frites[1],  
+            "boisson": menu.boisson[1]
+        };
+    </script>
+
+    <a class="hidden" href="{{path("app_logout")}}">disconnect</a>
+
+    <div id="div-planche">
+        {{ source('svg/planche.svg') }}
+    </div>
+
+    <section id="menu-svg">
+        <div id="pain">
+            {{ source('svg/baguette.svg') }}
+            {{ source('svg/burger.svg') }}
+        </div>
+        <div id="viande">
+            {{ source('svg/merguez.svg') }}
+        </div>
+        <div id="sauce">
+            {{ source('svg/ketchup.svg') }}
+        </div>
+        <div id="frites">
+        
+        </div>
+        <div id="boisson">
+        
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{{asset("assets/js/drag&drop.js")}}"></script>
 {% endblock %}
