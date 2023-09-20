@@ -1,5 +1,15 @@
 body {
   height: 100vh;
   width: 100vh;
-  background: url();
+  background: url(img/bg.svg) no-repeat;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.food_truck {
+  width: 50%;
+
+  position: absolute;
+  top: 20%;
+  left: -100%;
 }
