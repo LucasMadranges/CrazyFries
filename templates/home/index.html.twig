@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+{% block css %}<style src="{{asset('assets/css/style.css')}}">{% endblock %}
+
+{% block body %}
+    <a href="{{path("app_logout")}}">disconnect</a>
+{% endblock %}
