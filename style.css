@@ -64,7 +64,7 @@ g {
 
   position: absolute;
   left: 40%;
-  top: 45%;
+  top: 100%;
 }
 
 .hand #tel-contact {
@@ -111,7 +111,7 @@ g {
   opacity: 0.7;
 }
 
-.hand #tel-contact #cuisto .cls-6 {
+.hand #tel-contact #cuisto .cls-06 {
   fill: white;
 }
 
@@ -131,6 +131,10 @@ g {
 .hand #tel-contact #bryan:hover .bg_contact,
 .hand #tel-contact #maxime:hover .bg_contact {
   fill: gainsboro;
+}
+
+.hand #tel-contact #appel:hover > path {
+  fill: #8c9e3f;
 }
 
 .food_truck::before {

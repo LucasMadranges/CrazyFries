@@ -1,5 +1,7 @@
 const btnHand = document.getElementById("btn_hand");
+const hand = document.getElementsByClassName("hand");
 
+// BOUTON MENU TELEPHONE
 const btnContact = document.getElementById("contact");
 const btnRetour = document.getElementById("barre-info");
 const btnMail = document.getElementById("mail");
@@ -13,20 +15,25 @@ const btnAppli4 = document.getElementById("appli-4");
 const btnAppli5 = document.getElementById("appli-5");
 const btnAppli6 = document.getElementById("appli-6");
 
+// MENU TEL
 const menuTel = document.getElementById("tel-accueil");
 const menuContact = document.getElementById("tel-contact");
 
+// BOUTON CALL
 const btnAppel = document.getElementById("appel");
 const btnCancel = document.getElementById("cancel");
 
+// TEXT CONTACT
 const textContactCuisto = document.getElementById("text_contact_cuisto");
 const textContactBryan = document.getElementById("text_contact_bryan");
 const textContactMaxime = document.getElementById("text_contact_maxime");
 
+// BG CONTACT
 const bgContactCuisto = document.getElementById("bg_contact_cuisto");
 const bgContactBryan = document.getElementById("bg_contact_bryan");
 const bgContactMaxime = document.getElementById("bg_contact_maxime");
 
+// SOUND BOARD
 const soundPhone = document.querySelector("#phone_song");
 const soundNonMario = document.querySelector("#mario_non_song");
 
@@ -40,9 +47,7 @@ btnAppli5.addEventListener("click", NonSound);
 btnAppli6.addEventListener("click", NonSound);
 btnMail.addEventListener("click", NonSound);
 
-btnCuisto.addEventListener("click", ContactCuisto);
-btnBryan.addEventListener("click", ContactBryan);
-btnMaxime.addEventListener("click", ContactMaxime);
+// MENU
 
 function HideMenu() {
   menuTel.style.display = "none";
@@ -59,6 +64,12 @@ function HideContact() {
 function NonSound() {
   soundNonMario.play();
 }
+
+// CONTACT
+
+btnCuisto.addEventListener("click", ContactCuisto);
+btnBryan.addEventListener("click", ContactBryan);
+btnMaxime.addEventListener("click", ContactMaxime);
 
 function ContactCuisto() {
   btnAppel.style.display = "inline-block";
@@ -94,4 +105,28 @@ function ContactMaxime() {
   bgContactMaxime.classList.add("bg_contact_active");
   textContactMaxime.classList.add("text_contact_active");
   soundPhone.play();
+}
+
+// ANIMATION MAIN
+
+btnHand.addEventListener("click", anime_main);
+
+function anime_main() {
+  anime({
+    targets: hand,
+    translateY: "-450px",
+    duration: 3000,
+    easing: "easeOutExpo",
+  });
+}
+
+btnAppel.addEventListener("click", anime_main_aurevoir);
+
+function anime_main_aurevoir() {
+  anime({
+    targets: hand,
+    translateY: "450px",
+    duration: 3000,
+    easing: "easeOutExpo",
+  });
 }
