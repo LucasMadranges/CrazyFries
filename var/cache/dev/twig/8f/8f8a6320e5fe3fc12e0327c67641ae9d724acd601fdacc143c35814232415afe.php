@@ -111,7 +111,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
         echo "
     <script>
         const menu = {
-            \"pain\": [\"burger\", \"baguette\", \"pas de pain\"],
+            \"pain\": [\"burger\", \"baguette\", \"aucun\"],
             \"viande\": [\"merguez\", \"fricandelle\", \"steak\", \"poulet\"],
             \"sauce\": [\"ketchup\", \"mayo\", \"moutarde\"],
             \"frites\": [\"petite\", \"moyenne\", \"grande\", \"aucune\"],
@@ -228,7 +228,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
 
     <script>
         const menu = {
-            \"pain\": [\"burger\", \"baguette\", \"pas de pain\"],
+            \"pain\": [\"burger\", \"baguette\", \"aucun\"],
             \"viande\": [\"merguez\", \"fricandelle\", \"steak\", \"poulet\"],
             \"sauce\": [\"ketchup\", \"mayo\", \"moutarde\"],
             \"frites\": [\"petite\", \"moyenne\", \"grande\", \"aucune\"],

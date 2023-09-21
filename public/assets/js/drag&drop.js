@@ -5,6 +5,26 @@ $(".pain").each((i, e)=>{
         $(e).replaceWith("");
     }
 });
+$(".viande").each((i, e)=>{
+    if(e.id != choice.viande){
+        $(e).replaceWith("");
+    }
+});
+$(".sauce").each((i, e)=>{
+    if(e.id != choice.sauce){
+        $(e).replaceWith("");
+    }
+});
+$(".frites").each((i, e)=>{
+    if(e.id != choice.frites){
+        $(e).replaceWith("");
+    }
+});
+$(".boisson").each((i, e)=>{
+    if(e.id != choice.boisson){
+        $(e).replaceWith("");
+    }
+});
 
 $("#" + choice.pain).addClass("draggable");
 $("#" + choice.viande).addClass("draggable");
