@@ -383,7 +383,11 @@ class __TwigTemplate_00dcc90611021721a63e120b01b4fcede1f07f411acbd094f028d78e8af
 \t  \t<div class=\"d-flex justify-content-center align-items-center\">
         \t<button type=\"button\" class=\"btn btn-secondary btn-modal\" id=\"exit-modal\" data-bs-dismiss=\"modal\">Fermer</button>
         \t<button type=\"button\" class=\"btn btn-primary btn-modal\" id=\"add-order\">Ajouter une commande</button>
-\t\t\t<button type=\"button\" class=\"btn btn-primary btn-modal\" id=\"end-order\">Finaliser la commande</button>
+\t\t\t<form action=\"http://crazyfries/menu/save\" method=\"get\">
+\t\t\t\t<input type=\"hidden\" id=\"hidden-data\" name=\"hidden-data\">
+\t\t\t\t<button type=\"button\" class=\"btn btn-primary btn-modal\" id=\"end-order\">Finaliser la commande</button>
+\t\t\t\t<button type=\"submit\" class=\"hidden-btn\" id=\"submit-end-order\"></button>
+\t\t\t</form>
 \t\t</div>
       </div>
     </div>
@@ -398,7 +402,7 @@ class __TwigTemplate_00dcc90611021721a63e120b01b4fcede1f07f411acbd094f028d78e8af
 
     }
 
-    // line 272
+    // line 276
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -431,7 +435,7 @@ class __TwigTemplate_00dcc90611021721a63e120b01b4fcede1f07f411acbd094f028d78e8af
 
     public function getDebugInfo()
     {
-        return array (  402 => 272,  134 => 12,  124 => 11,  105 => 9,  91 => 6,  81 => 5,  62 => 3,  39 => 1,);
+        return array (  406 => 276,  134 => 12,  124 => 11,  105 => 9,  91 => 6,  81 => 5,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -699,7 +703,11 @@ class __TwigTemplate_00dcc90611021721a63e120b01b4fcede1f07f411acbd094f028d78e8af
 \t  \t<div class=\"d-flex justify-content-center align-items-center\">
         \t<button type=\"button\" class=\"btn btn-secondary btn-modal\" id=\"exit-modal\" data-bs-dismiss=\"modal\">Fermer</button>
         \t<button type=\"button\" class=\"btn btn-primary btn-modal\" id=\"add-order\">Ajouter une commande</button>
-\t\t\t<button type=\"button\" class=\"btn btn-primary btn-modal\" id=\"end-order\">Finaliser la commande</button>
+\t\t\t<form action=\"http://crazyfries/menu/save\" method=\"get\">
+\t\t\t\t<input type=\"hidden\" id=\"hidden-data\" name=\"hidden-data\">
+\t\t\t\t<button type=\"button\" class=\"btn btn-primary btn-modal\" id=\"end-order\">Finaliser la commande</button>
+\t\t\t\t<button type=\"submit\" class=\"hidden-btn\" id=\"submit-end-order\"></button>
+\t\t\t</form>
 \t\t</div>
       </div>
     </div>

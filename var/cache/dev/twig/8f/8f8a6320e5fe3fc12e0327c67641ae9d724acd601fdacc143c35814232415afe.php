@@ -110,31 +110,49 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
         // line 7
         echo "
     <script>
-        const menu = {
-            \"pain\": [\"burger\", \"baguette\", \"aucun\"],
-            \"viande\": [\"merguez\", \"fricandelle\", \"steak\", \"poulet\"],
-            \"sauce\": [\"ketchup\", \"mayo\", \"moutarde\"],
-            \"frites\": [\"petite\", \"moyenne\", \"grande\", \"aucune\"],
-            \"boisson\": [\"coca\", \"orangina\", \"vittel\", \"aucune\"]
-        };
 
-        var choice = {
-            \"pain\": menu.pain[0],      
-            \"viande\": menu.viande[0],  
-            \"sauce\": menu.sauce[0],    
-            \"frites\": menu.frites[1],  
-            \"boisson\": menu.boisson[1]
-        };
+        ";
+        // line 10
+        if (array_key_exists("orders", $context)) {
+            // line 11
+            echo "            var choice = {
+                \"pain\": '";
+            // line 12
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 12, $this->source); })()), 0, [], "array", false, false, false, 12), "pain", [], "any", false, false, false, 12), "html", null, true);
+            echo "',      
+                \"viande\": '";
+            // line 13
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 13, $this->source); })()), 0, [], "array", false, false, false, 13), "viande", [], "any", false, false, false, 13), "html", null, true);
+            echo "',  
+                \"sauce\": '";
+            // line 14
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 14, $this->source); })()), 0, [], "array", false, false, false, 14), "sauce", [], "any", false, false, false, 14), "html", null, true);
+            echo "',    
+                \"frites\": '";
+            // line 15
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 15, $this->source); })()), 0, [], "array", false, false, false, 15), "frites", [], "any", false, false, false, 15), "html", null, true);
+            echo "',  
+                \"boisson\": '";
+            // line 16
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 16, $this->source); })()), 0, [], "array", false, false, false, 16), "boisson", [], "any", false, false, false, 16), "html", null, true);
+            echo "',
+            };
+        ";
+        }
+        // line 19
+        echo "
+        console.log(choice);
+
     </script>
 
     <a class=\"hidden\" href=\"";
-        // line 26
+        // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">disconnect</a>
 
     <div id=\"div-planche\">
         ";
-        // line 29
+        // line 27
         echo twig_source($this->env, "svg/planche.svg");
         echo "
     </div>
@@ -142,23 +160,23 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
     <section id=\"menu-svg\">
         <div id=\"pain\">
             ";
-        // line 34
+        // line 32
         echo twig_source($this->env, "svg/baguette.svg");
         echo "
             ";
-        // line 35
+        // line 33
         echo twig_source($this->env, "svg/burger.svg");
         echo "
         </div>
         <div id=\"viande\">
             ";
-        // line 38
+        // line 36
         echo twig_source($this->env, "svg/merguez.svg");
         echo "
         </div>
         <div id=\"sauce\">
             ";
-        // line 41
+        // line 39
         echo twig_source($this->env, "svg/ketchup.svg");
         echo "
         </div>
@@ -179,7 +197,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
 
     }
 
-    // line 53
+    // line 51
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -189,7 +207,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 54
+        // line 52
         echo "    <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/drag&drop.js"), "html", null, true);
         echo "\"></script>
@@ -214,7 +232,7 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
 
     public function getDebugInfo()
     {
-        return array (  193 => 54,  183 => 53,  162 => 41,  156 => 38,  150 => 35,  146 => 34,  138 => 29,  132 => 26,  111 => 7,  101 => 6,  80 => 4,  61 => 3,  38 => 1,);
+        return array (  211 => 52,  201 => 51,  180 => 39,  174 => 36,  168 => 33,  164 => 32,  156 => 27,  150 => 24,  143 => 19,  137 => 16,  133 => 15,  129 => 14,  125 => 13,  121 => 12,  118 => 11,  116 => 10,  111 => 7,  101 => 6,  80 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -227,21 +245,19 @@ class __TwigTemplate_86e53f658a3e08723a84fd2f4a48a4d51dfca5acae5beccbab4a0c4801a
 {% block body %}
 
     <script>
-        const menu = {
-            \"pain\": [\"burger\", \"baguette\", \"aucun\"],
-            \"viande\": [\"merguez\", \"fricandelle\", \"steak\", \"poulet\"],
-            \"sauce\": [\"ketchup\", \"mayo\", \"moutarde\"],
-            \"frites\": [\"petite\", \"moyenne\", \"grande\", \"aucune\"],
-            \"boisson\": [\"coca\", \"orangina\", \"vittel\", \"aucune\"]
-        };
 
-        var choice = {
-            \"pain\": menu.pain[0],      
-            \"viande\": menu.viande[0],  
-            \"sauce\": menu.sauce[0],    
-            \"frites\": menu.frites[1],  
-            \"boisson\": menu.boisson[1]
-        };
+        {% if orders is defined %}
+            var choice = {
+                \"pain\": '{{ orders[0].pain }}',      
+                \"viande\": '{{ orders[0].viande }}',  
+                \"sauce\": '{{ orders[0].sauce }}',    
+                \"frites\": '{{ orders[0].frites }}',  
+                \"boisson\": '{{ orders[0].boisson }}',
+            };
+        {% endif %}
+
+        console.log(choice);
+
     </script>
 
     <a class=\"hidden\" href=\"{{path(\"app_logout\")}}\">disconnect</a>

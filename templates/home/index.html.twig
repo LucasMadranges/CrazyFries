@@ -6,21 +6,19 @@
 {% block body %}
 
     <script>
-        const menu = {
-            "pain": ["burger", "baguette", "aucun"],
-            "viande": ["merguez", "fricandelle", "steak", "poulet"],
-            "sauce": ["ketchup", "mayo", "moutarde"],
-            "frites": ["petite", "moyenne", "grande", "aucune"],
-            "boisson": ["coca", "orangina", "vittel", "aucune"]
-        };
 
-        var choice = {
-            "pain": menu.pain[0],      
-            "viande": menu.viande[0],  
-            "sauce": menu.sauce[0],    
-            "frites": menu.frites[1],  
-            "boisson": menu.boisson[1]
-        };
+        {% if orders is defined %}
+            var choice = {
+                "pain": '{{ orders[0].pain }}',      
+                "viande": '{{ orders[0].viande }}',  
+                "sauce": '{{ orders[0].sauce }}',    
+                "frites": '{{ orders[0].frites }}',  
+                "boisson": '{{ orders[0].boisson }}',
+            };
+        {% endif %}
+
+        console.log(choice);
+
     </script>
 
     <a class="hidden" href="{{path("app_logout")}}">disconnect</a>

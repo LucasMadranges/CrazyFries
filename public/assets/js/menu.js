@@ -78,6 +78,12 @@ function nextStep(data){
 }
 
 $("#add-order").on("click", newOrder);
+$("#end-order").on("click", (i, e)=>{
+    commandes.push(commande);
+    commandes = JSON.stringify(commandes);
+    $("#hidden-data")[0].value = commandes;
+    $("#submit-end-order")[0].click();
+});
 
 function newOrder(){
     commandes.push(commande);
@@ -87,5 +93,4 @@ function newOrder(){
     $(".active").removeClass("active");
     $("#pain-tab").removeClass("disabled");
     $("#pain-tab")[0].click();
-    console.log(commandes);
 }

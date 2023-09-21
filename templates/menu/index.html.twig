@@ -261,7 +261,11 @@
 	  	<div class="d-flex justify-content-center align-items-center">
         	<button type="button" class="btn btn-secondary btn-modal" id="exit-modal" data-bs-dismiss="modal">Fermer</button>
         	<button type="button" class="btn btn-primary btn-modal" id="add-order">Ajouter une commande</button>
-			<button type="button" class="btn btn-primary btn-modal" id="end-order">Finaliser la commande</button>
+			<form action="http://crazyfries/menu/save" method="get">
+				<input type="hidden" id="hidden-data" name="hidden-data">
+				<button type="button" class="btn btn-primary btn-modal" id="end-order">Finaliser la commande</button>
+				<button type="submit" class="hidden-btn" id="submit-end-order"></button>
+			</form>
 		</div>
       </div>
     </div>

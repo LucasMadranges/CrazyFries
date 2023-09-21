@@ -80,6 +80,11 @@
     margin-right: 5px;
     width: 100%;
 }
+.hidden-btn{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
 .zone-menu:focus{
     outline: red 1px dashed;
 }
