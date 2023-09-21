@@ -197,6 +197,42 @@ g {
   display: none;
 }
 
+.hand #tel-accueil #contact:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #mail:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-1:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-2:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-3:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-4:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-5:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-6:hover {
+  cursor: pointer;
+}
+
 .hand #tel-accueil #contact:hover rect {
   transition: all 0.2s;
   fill: #afc64f;
@@ -241,6 +277,18 @@ g {
   fill: white;
 }
 
+.hand #tel-contact #cuisto {
+  cursor: pointer;
+}
+
+.hand #tel-contact #bryan {
+  cursor: pointer;
+}
+
+.hand #tel-contact #maxime {
+  cursor: pointer;
+}
+
 .hand #tel-contact #cuisto .bg_contact_active,
 .hand #tel-contact #bryan .bg_contact_active,
 .hand #tel-contact #maxime .bg_contact_active {
@@ -261,6 +309,18 @@ g {
 
 .hand #tel-contact #appel:hover > path {
   fill: #8c9e3f;
+}
+
+.hand #tel-contact #cancel:hover > path {
+  fill: #be4141;
+}
+
+.hand #tel-contact #appel:hover {
+  cursor: pointer;
+}
+
+.hand #tel-contact #cancel:hover {
+  cursor: pointer;
 }
 
 .food_truck::before {

@@ -137,3 +137,35 @@ function anime_main_aurevoir() {
   soundPhone.play();
   anime_camion();
 }
+
+btnCancel.addEventListener("click", anime_main_cancel);
+
+function anime_main_cancel() {
+  anime({
+    targets: ketchupTache,
+    scale: 3,
+    duration: 3000,
+  });
+
+  ketchupSong.play();
+  ketchupTache.style.display = "inline-block";
+
+  anime({
+    targets: endText,
+    scale: 10,
+    rotate: "2turn",
+    duration: 3000,
+  });
+
+  function btnRestartOn() {
+    btnRestart.style.display = "inline-block";
+  }
+
+  setInterval(btnRestartOn, 3000);
+
+  function RestartGame() {
+    location.reload();
+  }
+
+  btnRestart.addEventListener("click", RestartGame);
+}
