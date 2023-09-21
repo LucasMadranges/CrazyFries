@@ -28,15 +28,15 @@
         <audio src="audio/sound_phone.mp3" id="phone_song"></audio>
         <audio src="audio/non-mario.mp3" id="mario_non_song"></audio>
 
+        <audio src="audio/cartoon-splat-6086.mp3" id="ketchup_song"></audio>
+
         <audio
           src="audio/animal-crossing-isabelle-voice-clips-no-background-music-youtubemp3free.mp3"
           id="animal_crossing_song"
         ></audio>
 
-        <div id="bull_text">
-          Bonjour ! Merci d'avoir appelé Crazy Fries ! Vous souhaitez prendre un
-          dessert, une boisson ou un menu complet ? On a de tout ! Et pour pas
-          chère en plus !
+        <div id="bull_text" class="typewriter-effect">
+          <div id="typewriter-text" class="text"></div>
         </div>
 
         <svg
@@ -2245,6 +2245,11 @@
             </g>
           </g>
         </svg>
+
+        <div class="grp_btn">
+          <button id="btn_discussion_1">J'aimerais commander !</button>
+          <button id="btn_discussion_3">Non, je ne veux rien commander.</button>
+        </div>
       </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -2252,5 +2257,7 @@
     <script src="script/hand_script.js"></script>
     <script src="script/cursor.js"></script>
     <script src="script/bull_text.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@nicesapien0/typewriter.js/typewriter.js"></script>
+    <script src="script/js_typewritter.js"></script>
   </body>
 </html>
