@@ -3,6 +3,7 @@ const animalCrossingSong = document.getElementById("animal_crossing_song");
 
 const btnDiscussion1 = document.getElementById("btn_discussion_1");
 const btnDiscussion3 = document.getElementById("btn_discussion_3");
+const btnRestart = document.getElementById("btn_restart");
 
 const ketchupSong = document.getElementById("ketchup_song");
 const ketchupTache = document.getElementById("ketchup");
@@ -44,4 +45,16 @@ function HideOffAll() {
     rotate: "2turn",
     duration: 3000,
   });
+
+  function btnRestartOn() {
+    btnRestart.style.display = "inline-block";
+  }
+
+  setInterval(btnRestartOn, 3000);
 }
+
+function RestartGame() {
+  location.reload();
+}
+
+btnRestart.addEventListener("click", RestartGame);
