@@ -1,0 +1,6 @@
+.cursor {
+  background: url(img/illustration/main-cursor.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  cursor: none;
+}

@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CrazyFries Le Food Truck de l'année!</title>
+    <title>CrazyFries &brvbar; Le Food Truck de l'année!</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cursor.css" />
   </head>
   <body>
+    <!-- <div class="cursor"></div> -->
     <div>
       <nav>
         <ul>
@@ -20,15 +22,21 @@
       </nav>
 
       <section class="section_minigame">
-        <audio src="audio/engine.mp3" id="engine_song"></audio>
+        <audio src="audio/engine.mp3" id="engine_song" loop></audio>
         <audio src="audio/mario_song.mp3" id="mario_song"></audio>
 
         <audio src="audio/sound_phone.mp3" id="phone_song"></audio>
         <audio src="audio/non-mario.mp3" id="mario_non_song"></audio>
 
-        <div id="btns">
-          <button id="btn_camion">BOUTON CAMION</button>
-          <button id="btn_hand">HAND</button>
+        <audio
+          src="audio/animal-crossing-isabelle-voice-clips-no-background-music-youtubemp3free.mp3"
+          id="animal_crossing_song"
+        ></audio>
+
+        <div id="bull_text">
+          Bonjour ! Merci d'avoir appelé Crazy Fries ! Vous souhaitez prendre un
+          dessert, une boisson ou un menu complet ? On a de tout ! Et pour pas
+          chère en plus !
         </div>
 
         <svg
@@ -2242,5 +2250,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="script/camion_script.js"></script>
     <script src="script/hand_script.js"></script>
+    <script src="script/cursor.js"></script>
+    <script src="script/bull_text.js"></script>
   </body>
 </html>

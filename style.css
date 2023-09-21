@@ -7,6 +7,7 @@
 
 body {
   height: 100vh;
+  /* cursor: none; */
 }
 
 nav {
@@ -49,6 +50,34 @@ g {
 #vache {
   opacity: 0;
   transform: translateY(65%);
+}
+
+#bull_text {
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  color: black;
+  padding: 25px;
+
+  font-size: 16px;
+  font-family: sans-serif;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+
+  position: absolute;
+  top: 20%;
+  right: 75%;
+  z-index: 999;
+
+  display: none;
 }
 
 .food_truck {

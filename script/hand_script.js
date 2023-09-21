@@ -1,5 +1,6 @@
 const btnHand = document.getElementById("btn_hand");
 const hand = document.getElementsByClassName("hand");
+const phone = document.getElementById("phone");
 
 // BOUTON MENU TELEPHONE
 const btnContact = document.getElementById("contact");
@@ -109,16 +110,12 @@ function ContactMaxime() {
 
 // ANIMATION MAIN
 
-btnHand.addEventListener("click", anime_main);
-
-function anime_main() {
-  anime({
-    targets: hand,
-    translateY: "-450px",
-    duration: 3000,
-    easing: "easeOutExpo",
-  });
-}
+anime({
+  targets: hand,
+  translateY: "-450px",
+  duration: 3000,
+  easing: "easeOutExpo",
+});
 
 btnAppel.addEventListener("click", anime_main_aurevoir);
 
@@ -129,4 +126,13 @@ function anime_main_aurevoir() {
     duration: 3000,
     easing: "easeOutExpo",
   });
+
+  anime({
+    targets: phone,
+    rotate: "360deg",
+    duration: 1000,
+    easing: "easeOutExpo",
+  });
+
+  anime_camion();
 }

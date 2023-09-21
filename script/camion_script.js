@@ -66,4 +66,5 @@ function anime_camion() {
   }
 
   setTimeout(mario_song, 3000);
+  setTimeout(HideOffBullText, 6000);
 }
