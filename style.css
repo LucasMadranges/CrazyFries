@@ -87,6 +87,40 @@ g {
   display: none;
 }
 
+.btn_group_nav {
+  gap: 32px;
+}
+
+.btn_nav {
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_nav:hover {
+  border-bottom: 2px solid #ffc727;
+}
+
+.btn_nav_icon {
+  background-color: white;
+  border: none;
+
+  cursor: pointer;
+}
+
+.menu_icon {
+  padding: 0;
+  border: none;
+
+  height: 50px;
+}
+
 .grp_btn {
   width: 100%;
   margin-top: 40%;
