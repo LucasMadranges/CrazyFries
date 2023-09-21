@@ -104,7 +104,7 @@ g {
 }
 
 .btn_nav:hover {
-  border-bottom: 2px solid #ffc727;
+  text-decoration: underline;
 }
 
 .btn_nav_icon {
@@ -118,7 +118,7 @@ g {
   padding: 0;
   border: none;
 
-  height: 50px;
+  height: 60px;
 }
 
 .grp_btn {
