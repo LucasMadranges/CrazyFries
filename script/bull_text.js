@@ -5,6 +5,8 @@ const btnDiscussion1 = document.getElementById("btn_discussion_1");
 const btnDiscussion3 = document.getElementById("btn_discussion_3");
 
 const ketchupSong = document.getElementById("ketchup_song");
+const ketchupTache = document.getElementById("ketchup");
+const endText = document.getElementById("end");
 
 function HideOffBullText() {
   bullText.style.display = "inline-block";
@@ -27,5 +29,19 @@ function HideOffAll() {
   btnDiscussion3.style.display = "none";
   bullText.style.display = "none";
 
+  anime({
+    targets: ketchupTache,
+    scale: 3,
+    duration: 3000,
+  });
+
   ketchupSong.play();
+  ketchupTache.style.display = "inline-block";
+
+  anime({
+    targets: endText,
+    scale: 10,
+    rotate: "2turn",
+    duration: 3000,
+  });
 }

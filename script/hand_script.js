@@ -134,5 +134,6 @@ function anime_main_aurevoir() {
     easing: "easeOutExpo",
   });
 
+  soundPhone.play();
   anime_camion();
 }

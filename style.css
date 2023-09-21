@@ -30,6 +30,10 @@ ul div {
   gap: 10px;
 }
 
+.logo {
+  height: 65px;
+}
+
 .section_minigame {
   height: 90vh;
   background: url(img/bg.svg) no-repeat;
@@ -44,7 +48,8 @@ g {
 
 #roueune,
 #rouedeux,
-#vache {
+#vache,
+#end {
   transform-origin: 50% 50%;
   transform-box: fill-box;
 }
@@ -207,4 +212,15 @@ g {
   width: 100px;
   z-index: 9999;
   background-color: white;
+}
+
+.ketchup {
+  width: 50%;
+
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+
+  display: none;
 }
