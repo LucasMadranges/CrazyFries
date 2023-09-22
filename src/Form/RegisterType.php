@@ -19,8 +19,8 @@ class RegisterType extends AbstractType
         ->add('email', EmailType::class, [
             'label' => false,
             "attr" => [
-                "class" => "form-control",
-                'placeholder' => "Votre email",
+                "class" => "form-control demail",
+                'placeholder' => "Email",
             ]
         ])
         ->add('password', RepeatedType::class, [
@@ -28,15 +28,15 @@ class RegisterType extends AbstractType
             'first_options' => [
                 'label' => false,
                 'attr' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'Votre mot de passe',
+                    'class' => 'form-control dpassword2',
+                    'placeholder' => 'Password',
                 ],
             ],
             'second_options' => [
                 'label' => false,
                 'attr' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'Confirmez votre mot de passe',
+                    'class' => 'form-control dpassword',
+                    'placeholder' => 'Confirm password',
                 ],
             ]
         ])

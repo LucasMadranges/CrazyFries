@@ -1,7 +1,238 @@
-#planche{
-    width: 30rem;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 #baguette, #merguez, #ketchup, #burger{
-    width: 15rem;
     cursor:grab;
 }
+
+
+/* CONNEXION */
+
+.toutout {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.filtre {
+    background-color: rgba(69, 90, 100, 0.7);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.tout {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.tout-logo {
+    display: flex;
+    background-color: white;
+    border: 2px solid #263238;
+    height: 70vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tout-logo img {
+    height: 50%;
+    width: auto;
+}
+
+.tout-connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #263238;
+    border: 2px solid #263238;
+    height: 70%;
+    width: 40%;
+}
+
+.co {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 8vh;
+}
+
+.co button{
+    width: 50%;
+    border: 0px ;
+    padding: 10px;
+    color: #263238;
+    background-color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.co button:hover {
+    color: #263238;
+    background-color: #FFCC3A;
+}
+
+.co div {
+    width: 100%;
+    text-align: center;
+}
+
+.inscr {
+    width: 40%;
+    height: auto;
+    text-align: center;
+}
+
+.inscr a {
+    color: gray;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.inscr a:hover {
+    color: #FFCC3A;
+}
+
+.trait {
+    height: 1.5px;
+    width: 100%;
+    background-color: gray;
+    margin-bottom: 5px;
+}
+
+.demail, .dpassword, .dpassword2 {
+    background-color: transparent !important;
+    border: 0;
+    border-bottom: 2px #FFCC3A solid;
+    padding: 15px;
+    color: white;
+    width: 100%;
+}
+
+.dpassword {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.dpassword2 {
+    margin-top: 20px;
+}
+
+
+.tconnexion {
+    color: #FFCC3A;
+    letter-spacing: 3px;
+    font-size: 36px;
+}
+
+:focus-visible {
+    outline: 0px;
+}
+
+
+
+
+
+.body {
+    height: 100vh;
+    /* cursor: none; */
+  }
+  
+  nav {
+    height: 10vh;
+    width: 100%;
+  }
+  
+  ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+  
+  ul div {
+    display: flex;
+    gap: 10px;
+  }
+
+  li {
+    display: inline-flex;
+  }
+  
+  .logo {
+    height: 65px;
+  }
+  
+  .partie_minigame {
+    background-color: #FFCC3A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .partie_minigame svg {
+    height: 90vh;
+  }
+
+  #div-comptoir {
+    height: 90vh;
+
+  }
+
+  .btn_group_nav {
+    gap: 32px;
+  }
+  
+  
+  .btn_nav {
+    cursor: pointer;
+    background-color: white;
+    font-size: 16px;
+    color: #263238;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  
+  .btn_nav:hover {
+    text-decoration: underline;
+  }
+  
+  .btn_nav_icon {
+    background-color: white;
+    border: none;
+  
+    cursor: pointer;
+  }
+  
+  .menu_icon {
+    padding: 0;
+    border: none;
+  
+    height: 60px;
+  }

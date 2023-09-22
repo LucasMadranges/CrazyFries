@@ -16,10 +16,14 @@ class HomeController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
 
+        if ($session->get("ending")) {
+            
+            return $this->render('home/end.html.twig', [
+                'orders' => $session->get("orders"),
+                'ending' => $session->get("ending"),
+            ]);
+        }
 
-        return $this->render('home/index.html.twig', [
-            'orders' => $session->get("orders"),
-            'ending' => $session->get("ending"),
-        ]);
+        return $this->render('home/index.html.twig', []);
     }
 }

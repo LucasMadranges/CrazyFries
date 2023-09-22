@@ -1,28 +1,53 @@
 let iteration = 0;
+let arrayEl = [];
 
-$(".pain").each((i, e)=>{
-    if(e.id != choice.pain){
-        $(e).replaceWith("");
+$("#pain").each((i, e)=>{
+    arrayEl = Array.from(e.children);
+});
+
+arrayEl.forEach(el => {
+        if(el.id != choice.pain){
+            $(el).replaceWith("");
+        }
+});
+
+$("#viande").each((i, e)=>{
+    arrayEl = Array.from(e.children);
+});
+
+arrayEl.forEach(el => {
+    if(el.id != choice.viande){
+        $(el).replaceWith("");
     }
 });
-$(".viande").each((i, e)=>{
-    if(e.id != choice.viande){
-        $(e).replaceWith("");
+
+$("#sauce").each((i, e)=>{
+    arrayEl = Array.from(e.children);
+});
+
+arrayEl.forEach(el => {
+    if(el.id != choice.sauce){
+        $(el).replaceWith("");
     }
 });
-$(".sauce").each((i, e)=>{
-    if(e.id != choice.sauce){
-        $(e).replaceWith("");
+
+$("#frites").each((i, e)=>{
+    arrayEl = Array.from(e.children);
+});
+
+arrayEl.forEach(el => {
+    if(el.id != choice.frites){
+        $(el).replaceWith("");
     }
 });
-$(".frites").each((i, e)=>{
-    if(e.id != choice.frites){
-        $(e).replaceWith("");
-    }
+
+$("#boisson").each((i, e)=>{
+    arrayEl = Array.from(e.children);
 });
-$(".boisson").each((i, e)=>{
-    if(e.id != choice.boisson){
-        $(e).replaceWith("");
+
+arrayEl.forEach(el => {
+    if(el.id != choice.boisson){
+        $(el).replaceWith("");
     }
 });
 
@@ -37,17 +62,24 @@ if(choice.boisson != "aucune"){
     $("#" + choice.boisson).addClass("draggable");
 }
 
-$(".draggable").draggable();
 
-$("#div-planche").after(`<div id="div-planche-zone"></div>`)
+$(".draggable").draggable(({
+    drag: function( event, ui ) {
+        event.target.style.transform = "translate("+ui.position.left+"px, "+ui.position.top+"px)";
+    }
+  }));
 
-$("#div-planche-zone").width($("#planche-zone")[0].getBoundingClientRect().width);
-$("#div-planche-zone").height($("#planche-zone")[0].getBoundingClientRect().height);
-$("#div-planche-zone")[0].style.position = "absolute";
-$("#div-planche-zone")[0].style.zIndex = "12000";
-$("#div-planche-zone").offset($("#planche-zone").offset());
 
-$("#div-planche-zone").droppable({
+
+$("#planche").after(`<div id="div-planche"></div>`)
+
+$("#div-planche").width($("#planche-zone")[0].getBoundingClientRect().width);
+$("#div-planche").height($("#planche-zone")[0].getBoundingClientRect().height);
+$("#div-planche")[0].style.position = "absolute";
+$("#div-planche")[0].style.zIndex = "12000";
+$("#div-planche").offset($("#planche").offset());
+
+$("#div-planche").droppable({
     drop: function( event, ui ) {
         drop(event, ui);
     }
