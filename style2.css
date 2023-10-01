@@ -1,0 +1,346 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  /* cursor: none; */
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:32px;'><text y='50%'>👆</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+}
+
+ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+ul div {
+  display: flex;
+  gap: 10px;
+}
+
+.logo {
+  height: 65px;
+}
+
+.section_minigame {
+  height: 90vh;
+  background: url(img/bg.svg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+svg,
+g {
+  transform-origin: unset;
+}
+
+#roueune,
+#rouedeux,
+#vache,
+#end {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+#vache {
+  opacity: 0;
+  transform: translateY(65%);
+}
+
+#bull_text {
+  width: 250px;
+  height: 265px;
+  background-color: white;
+  color: black;
+  padding: 25px;
+
+  font-size: 16px;
+  font-family: sans-serif;
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+
+  position: absolute;
+  top: 20%;
+  right: 75%;
+  z-index: 999;
+
+  display: none;
+}
+
+.btn_group_nav {
+  gap: 32px;
+}
+
+.btn_nav {
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_nav:hover {
+  text-decoration: underline;
+}
+
+.btn_nav_icon {
+  background-color: white;
+  border: none;
+
+  cursor: pointer;
+}
+
+.menu_icon {
+  padding: 0;
+  border: none;
+
+  height: 60px;
+}
+
+.grp_btn {
+  width: 100%;
+  margin-top: 40%;
+  padding: 0 32px;
+
+  display: flex;
+  gap: 32px;
+}
+
+.grp_btn button {
+  border: 2px solid black;
+  background-color: white;
+  width: 100%;
+  padding: 12px 24px;
+  font-size: 24px;
+
+  z-index: 9999;
+
+  display: none;
+
+  transition: all 0.2s;
+}
+
+.grp_btn button:hover {
+  background-color: #263238;
+  color: #ffc727;
+  cursor: pointer;
+}
+
+.text {
+  width: 200px;
+}
+
+#btn_restart {
+  border: 2px solid black;
+  background-color: white;
+  width: 25%;
+  padding: 12px 24px;
+  font-size: 24px;
+
+  margin: 0 50%;
+  transform: translateX(-50%);
+
+  z-index: 99999;
+
+  transition: all 0.2s;
+
+  display: none;
+}
+
+#btn_restart:hover {
+  background-color: #263238;
+  color: #ffc727;
+  cursor: pointer;
+}
+
+.food_truck {
+  width: 50%;
+
+  position: absolute;
+  top: 35%;
+  left: -100%;
+}
+
+.hand {
+  width: 20%;
+
+  position: absolute;
+  left: 40%;
+  top: 100%;
+}
+
+.hand #tel-contact {
+  display: none;
+}
+
+.hand #tel-accueil #contact:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #mail:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-1:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-2:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-3:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-4:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-5:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #appli-6:hover {
+  cursor: pointer;
+}
+
+.hand #tel-accueil #contact:hover rect {
+  transition: all 0.2s;
+  fill: #afc64f;
+}
+
+.hand #tel-accueil #appli:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-2:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-3:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-4:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-5:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #appli-6:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-accueil #mail:hover > rect {
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.hand #tel-contact #cuisto .cls-06 {
+  fill: white;
+}
+
+.hand #tel-contact #cuisto {
+  cursor: pointer;
+}
+
+.hand #tel-contact #bryan {
+  cursor: pointer;
+}
+
+.hand #tel-contact #maxime {
+  cursor: pointer;
+}
+
+.hand #tel-contact #cuisto .bg_contact_active,
+.hand #tel-contact #bryan .bg_contact_active,
+.hand #tel-contact #maxime .bg_contact_active {
+  fill: #455a64;
+}
+
+.hand #tel-contact #cuisto .text_contact_active,
+.hand #tel-contact #bryan .text_contact_active,
+.hand #tel-contact #maxime .text_contact_active {
+  fill: white;
+}
+
+.hand #tel-contact #cuisto:hover .bg_contact,
+.hand #tel-contact #bryan:hover .bg_contact,
+.hand #tel-contact #maxime:hover .bg_contact {
+  fill: gainsboro;
+}
+
+.hand #tel-contact #appel:hover > path {
+  fill: #8c9e3f;
+}
+
+.hand #tel-contact #cancel:hover > path {
+  fill: #be4141;
+}
+
+.hand #tel-contact #appel:hover {
+  cursor: pointer;
+}
+
+.hand #tel-contact #cancel:hover {
+  cursor: pointer;
+}
+
+.food_truck::before {
+  content: "LOL";
+  height: 100px;
+  width: 100px;
+  z-index: 9999;
+  background-color: white;
+}
+
+.ketchup {
+  width: 50%;
+
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+
+  display: none;
+}
