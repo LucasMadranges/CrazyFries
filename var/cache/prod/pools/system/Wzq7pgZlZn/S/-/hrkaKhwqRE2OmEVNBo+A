@@ -1,0 +1,85 @@
+<?php //c2d7a3a3506389d34fa7e81f439f9e36
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT o0_.id AS id_0, o0_.order_num AS order_num_1, o0_.pain AS pain_2, o0_.viande AS viande_3, o0_.sauce AS sauce_4, o0_.frites AS frites_5, o0_.boisson AS boisson_6, o0_.relation_user_id AS relation_user_id_7 FROM `order` o0_ WHERE o0_.order_num = ?',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'o' => 'App\\Entity\\Order',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'order_num_1' => 'order_num',
+                    'pain_2' => 'pain',
+                    'viande_3' => 'viande',
+                    'sauce_4' => 'sauce',
+                    'frites_5' => 'frites',
+                    'boisson_6' => 'boisson',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'relation_user_id_7' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'o' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'relation_user_id_7' => 'relation_user_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'o',
+                    'order_num_1' => 'o',
+                    'pain_2' => 'o',
+                    'viande_3' => 'o',
+                    'sauce_4' => 'o',
+                    'frites_5' => 'o',
+                    'boisson_6' => 'o',
+                    'relation_user_id_7' => 'o',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Order',
+                    'order_num_1' => 'App\\Entity\\Order',
+                    'pain_2' => 'App\\Entity\\Order',
+                    'viande_3' => 'App\\Entity\\Order',
+                    'sauce_4' => 'App\\Entity\\Order',
+                    'frites_5' => 'App\\Entity\\Order',
+                    'boisson_6' => 'App\\Entity\\Order',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    [
+        [
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'sqlExecutor' => $o[1],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'resultSetMapping' => $o[2],
+            "\0".'Doctrine\\ORM\\Query\\ParserResult'."\0".'parameterMappings' => [
+                'orderNum' => [
+                    0,
+                ],
+            ],
+        ],
+    ]
+); }];

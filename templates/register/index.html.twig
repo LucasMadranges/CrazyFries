@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}- Inscription
+{% endblock %}
+
+{% block body %}
+	<style>
+		.toutout {
+			background-image: url('{{ asset('assets/img/bg.svg') }}');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: top center;
+		}
+	</style>
+	{{form_start(form)}}
+
+
+	<form class="mx-1 mx-md-4">
+
+		<div class="toutout">
+			<div class="filtre"></div>
+
+			<div class="tout">
+				<div class="tout-logo">
+					<img src="{{ asset('assets/img/logo/logo.svg') }}" alt="">
+				</div>
+
+				<div class="tout-connexion">
+					<h1 class="h3 mb-3 font-weight-normal tconnexion">INSCRIPTION</h1>
+
+					<div class="co">
+
+						{{ form_row(form.email) }}
+						{{ form_row(form.password.first) }}
+						{{ form_row(form.password.second) }}
+
+
+						<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+							{{ form_row(form._token) }}
+							{{ form_row(form.submit) }}
+						</div>
+
+					</div>
+
+					<div class="inscr">
+						<div class="trait"></div>
+						<a href="{{path("app_home")}}">
+							Se connecter
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</form>
+
+	{{ form_rest(form) }}
+	{{form_end(form)}}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}- Home{% endblock %}
+{% block css %}<link rel="stylesheet" href="{{asset("assets/css/style.css")}}">{% endblock %}
+
+{% block body %}
+
+    <script>
+
+        {% if orders is defined and orders[0] is defined %}
+            var choice = {
+                "pain": '{{ orders[0].pain }}',      
+                "viande": '{{ orders[0].viande }}',  
+                "sauce": '{{ orders[0].sauce }}',    
+                "frites": '{{ orders[0].frites }}',  
+                "boisson": '{{ orders[0].boisson }}',
+            };
+        {% endif %}
+
+    </script>
+
+    <a class="hidden" href="{{path("app_logout")}}">disconnect</a>
+
+    <section id="menu-svg">
+        {{ source('svg/comptoir.svg') }}
+    </section>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{{asset("assets/js/drag&drop.js")}}"></script>
+{% endblock %}

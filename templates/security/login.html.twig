@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	- Connexion
+{% endblock %}
+
+{% block body %}
+	<style>
+		.toutout {
+			background-image: url('{{ asset('assets/img/bg.svg') }}');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: top center;
+		}
+	</style>
+	<form method="post">
+		{% if error %}
+			<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		{% endif %}
+
+		{% if app.user %}
+			<div class="mb-3">
+				You are logged in as
+				{{ app.user.userIdentifier }},
+				<a href="{{ path('app_logout') }}">Logout</a>
+			</div>
+		{% endif %}
+
+		<div class="toutout">
+			<div class="filtre"></div>
+
+			<div class="tout">
+				<div class="tout-logo">
+					<img src="{{ asset('assets/img/logo/logo.svg') }}" alt="">
+				</div>
+
+				<div class="tout-connexion">
+					<h1 class="h3 mb-3 font-weight-normal tconnexion">CONNEXION</h1>
+
+					<div class="co">
+						<input class="demail" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Email" required autofocus>
+
+						<input class="dpassword" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Password" required>
+
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+						<button class="btn btn-lg btn-primary" type="submit">
+							Se connecter
+						</button>
+					</div>
+
+					<div class="inscr">
+						<div class="trait"></div>
+						<a href="{{path("app_register")}}">
+							S'inscrire
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</form>
+{% endblock %}
